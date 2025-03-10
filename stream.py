@@ -298,7 +298,7 @@ if mode == "Face Verification":
         cosine_similarity = F.cosine_similarity(emb1, emb2).item()
         st.write(f"**Cosine Similarity:** {cosine_similarity:.4f}")
         # Простой порог – настройте его под вашу задачу
-        threshold = 0.9
+        threshold = 0.7
         if cosine_similarity >= threshold:
             st.success("Позитивный запрос: изображения, вероятно, принадлежат одному человеку.")
         else:
